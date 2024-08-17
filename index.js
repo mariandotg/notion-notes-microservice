@@ -1,8 +1,9 @@
+import bodyParser from 'body-parser';
 import express from 'express'
 
 const app = express()
 
-app.use(express.json())
+app.use(bodyParser.text());
 
 app.get('/', (req, res) => {
     res.send('hola mundo!')
@@ -10,7 +11,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log(req.body)
-    const content = req.body.properties.Name.title[0].text.content;
+    const content = req.body
     console.log("content: ", content)
     const splitContent = content.split('\n');
     console.log("splitContent: ", splitContent)
