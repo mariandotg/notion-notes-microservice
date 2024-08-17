@@ -23,6 +23,6 @@ app.post('/', (req, res) => {
     res.send(responseBody)
 })
 
-app.listen(4321, () => {
-    console.log(`Example app listening on port 4321`)
+app.listen(3000, () => {
+    console.log(`Example app listening on port 3000`)
 })
